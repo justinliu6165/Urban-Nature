@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer .title {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title.urban {
+    left: 5%;
+}
+
+.title.nature {
+    right: 5%;
+}
+
+.layer img {
+    width: 100vw;
+}
+
+.bottom {
+    z-index: 1;
+}
+
+.top {
+    width: 50vw;
+    z-index: 2;
+}
+
+.handle {
+    position: absolute;
+    display: block; 
+    height: 100%;
+    background-color: #fff;
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+.skewed .handle {
+    top: 60%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.top .urban {
+    transform: skew(30deg);
+    margin-left: 1000px;
+    z-index: 2;
+    width: 200px;
+}
+
+.skewed .top img {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
